@@ -11,6 +11,6 @@ module.exports.addKill = function(req, res){
             res.send(err);
         }
         console.log(kill);
-        res.json(kill);
+        res.redirect("/");
     });
 }
