@@ -13,8 +13,10 @@
 
 <main>
     <div class="jumbotron">
-        <h1>This is great</h1>
-        <p>Welcome to templating using EJS</p>
+        <h1>Kills</h1>
+        <% killList.forEach(function(kill) { %>
+            <li><%= kill.boat %> - <%= kill.date %></li>
+        <% }); %>
     </div>
 </main>
 

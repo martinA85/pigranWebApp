@@ -1,0 +1,31 @@
+<!-- views/pages/index.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ./partials/head %>
+</head>
+<body class="container">
+
+<header>
+    <% include ./partials/header %>
+</header>
+
+<main>
+    <div id="create_kill">
+        <form action="/kill" method="POST">
+            <input type="date" name="date">
+            <input type="text" name="boat" value="Sloop">
+            <input type="checkbox" name="isLegend">
+            <input type="checkbox" name="isEmpty" value="true">
+            <input type="submit">
+        </form>
+    </div>
+</main>
+
+<footer>
+    <% include ./partials/footer %>
+</footer>
+
+</body>
+</html>

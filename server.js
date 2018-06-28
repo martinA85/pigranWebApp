@@ -5,8 +5,11 @@ var morgan = require("morgan");
 var cors = require('cors');
 var routes = require('./webapp/routes/appRoute')
 var mongoose = require('mongoose')
+var bodyParser = require('body-parser')
 //Importing configuration file
 const config = require('./config')
+//Importing models
+var kill = require('./webapp/models/killModel')
 
 //configuring database
 mongoose.Promise = global.Promise;
@@ -18,6 +21,9 @@ app.set('view engine', 'ejs');
 
 //Using Morgan package for dev
 app.use(morgan('dev'));
+
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
 //cors
 app.use(cors());
