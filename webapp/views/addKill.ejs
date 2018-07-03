@@ -14,11 +14,30 @@
 <main>
     <div id="create_kill">
         <form action="/kill" method="POST">
-            <input type="date" name="date">
-            <input type="text" name="boat" value="Sloop">
-            <input type="checkbox" name="isLegend">
-            <input type="checkbox" name="isEmpty" value="true">
-            <input type="submit">
+            <div class="form-group">
+                <label class="form-check-label" for="date">Date : </label>
+                <input class="form-control" type="date" name="date">
+            </div>
+
+            <div class="form-group">
+                <label class="form-check-label" for="boat">Type de bateau : </label>
+                <select class="form-control" id="boat" name="boat">
+                    <option value="Sloop">Sloop</option> 
+                    <option value="Gallion" selected>Gallion</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label class="form-check-label" for="isLegend">Légende : </label>
+                <input class="form-check-input" type="checkbox" name="isLegend">
+            </div>
+
+            <div class="form-group">
+                <label class="form-check-label" for="isEmpty">Vide : </label>
+                <input class="form-check-input" type="checkbox" name="isEmpty">
+            </div>
+
+            <input type="submit" class="btn btn-primary">
         </form>
     </div>
 </main>
