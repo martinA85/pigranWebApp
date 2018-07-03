@@ -31,6 +31,8 @@ app.use(cors());
 //routes set up
 routes(app);
 
+app.use(express.static('./webapp/res'));
+
 //start server
 app.listen(port);
 console.log('server started on port : ' + port);

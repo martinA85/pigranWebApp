@@ -2,7 +2,6 @@
 
 var mongoose = require('mongoose');
 var kill = mongoose.model('Kill');
-
 module.exports.addKill = function(req, res){
     let new_kill = new kill(req.body);
     if(new_kill.isEmpty = "on"){
