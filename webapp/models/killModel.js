@@ -11,13 +11,20 @@ var KillSchema = new Schema({
     boat : {
         type : String
     },
+    our_boat : {
+        type : String
+    },
     isLegend : {
         type : Boolean,
         default : false
     },
     isEmpty : {
         type : Boolean,
-        default : true
+        default : false
+    },
+    victory : {
+        type : Boolean,
+        default : false
     },
     createDate : {
         type : Date,

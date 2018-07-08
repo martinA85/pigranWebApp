@@ -14,10 +14,21 @@
 <main>
     <div class="jumbotron">
         <h1>Kills</h1>
-        <% killList.forEach(function(kill) { %>
-            <li><%= kill.boat %> - <%= kill.date %> - <%= kill.isLegend %> - <%= kill.isEmpty %></li>
-        <% }); %>
-    </div>
+        <ul class="list-group">
+            <% killList.forEach(function(kill) { %>
+                <%if (kill.victory == true) { %>
+                        <li class="list-group-item list-group-item-success">
+                        <img src="/icon/kill.png" style="height: 24px;">
+                <% } %>
+                <%if (kill.victory == false) { %>
+                        <li class="list-group-item list-group-item-danger">
+                        <img src="/icon/death.png" style="height: 24px;">
+                <% } %>
+                    <%= kill.boat %> - <%= kill.date %> - <%= kill.isLegend %> - <%= kill.isEmpty %>
+                </li>
+            <% }); %>
+        </ul>
+    </li>
 </main>
 
 <footer>
