@@ -1,5 +1,4 @@
 'use strict';
-
 var mongoose = require('mongoose');
 var kill = mongoose.model('Kill');
 module.exports.addKill = function(req, res){

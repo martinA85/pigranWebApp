@@ -1,5 +1,6 @@
 'use strict';
 
+var moment = require('moment');
 var mongoose = require('mongoose');
 var kill = mongoose.model('Kill');
 
@@ -16,7 +17,8 @@ module.exports.renderMainPage = function(req, res){
             killList : kills,
             killCounts : killCount,
             sloop : sloopKill,
-            gallion : gallionKill
+            gallion : gallionKill,
+            moment : moment,
         });
     })
 }

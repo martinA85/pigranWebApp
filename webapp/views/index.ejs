@@ -24,7 +24,10 @@
                         <li class="list-group-item list-group-item-danger">
                         <img src="/icon/death.png" style="height: 24px;">
                 <% } %>
-                    <%= kill.boat %> - <%= kill.date %> - <%= kill.isLegend %> - <%= kill.isEmpty %>
+                <%if (kill.isLegend == true) { %>
+                    <img src="/icon/legend.png" style="height: 24px;">
+                <% } %>
+                    <%= kill.boat %> - <%= moment(kill.date).format('DD MMM YYYY') %>
                 </li>
             <% }); %>
         </ul>
