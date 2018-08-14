@@ -27,6 +27,15 @@
                 <%if (kill.isLegend == true) { %>
                     <img src="/icon/legend.png" style="height: 24px;">
                 <% } %>
+                <%if (kill.isLegend == false) { %>
+                    <img src="/icon/nolegend.png" style="height: 24px;">
+                <% } %>
+                <%if (kill.isEmpty == false) { %>
+                    <img src="/icon/full.png" style="height: 24px;">
+                <% } %>
+                <%if (kill.isEmpty == true) { %>
+                    <img src="/icon/empty.png" style="height: 24px;">
+                <% } %>
                     <%= kill.boat %> - <%= moment(kill.date).format('DD MMM YYYY') %>
                 </li>
             <% }); %>

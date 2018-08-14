@@ -3,9 +3,6 @@ var mongoose = require('mongoose');
 var kill = mongoose.model('Kill');
 module.exports.addKill = function(req, res){
     let new_kill = new kill(req.body);
-    console.log(req.body.isEmpty);
-    console.log(req.body.isLegend);
-    console.log(req.body.victory);
     if(req.body.isEmpty == "on"){
         new_kill.isEmpty = true;
     }else{
